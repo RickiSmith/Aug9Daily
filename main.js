@@ -2,7 +2,7 @@
 
 function searchResults(){
   let url = "http://jsonplaceholder.typicode.com/users";
-  let output = document.getElementById("container");
+  let output = document.querySelector(".container");
   let userSearch = document.getElementById("userSearch").value;
   console.log(userSearch);
   if(userSearch){
@@ -11,8 +11,12 @@ function searchResults(){
   }
   fetch(url).then(function(response){
     response.json().then(function(data){
+
     for (var i = 0; i < data.length; i++) {
-      console.log(data[i].name);
+      let name = document.createElement("P");
+      let text = document.createTextNode(data[i].name);
+      name.appendChild(text);
+      output.appendChild(name);
     }
     })
   })
