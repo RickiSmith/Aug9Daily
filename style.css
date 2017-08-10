@@ -1,0 +1,16 @@
+header{
+}
+
+input{
+}
+
+.thumbnail{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div a{
+  margin: auto 0;
+  border: 1px solid #020202;
+  margin: 5px;
+}
